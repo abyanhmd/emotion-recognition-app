@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Emotionly">
         <activity
+            android:name=".model.home.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".model.register.SignupActivity"
             android:exported="false" />
         <activity
