@@ -3,8 +3,8 @@
 - [x] Sign Up
 - [x] Log In
 - [ ] Dashboard
-  - [ ] Paging
 - [ ] Recording History
+  - [ ] Paging
 - [ ] Audio Input
   - [ ] Tab Pager
   - [ ] Recording
