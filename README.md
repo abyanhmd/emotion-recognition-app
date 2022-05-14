@@ -1,7 +1,7 @@
 # emotion-recognition-app
 
-- [ ] Sign Up
-- [ ] Log In
+- [x] Sign Up
+- [x] Log In
 - [ ] Dashboard
 - [ ] Recording History
 - [ ] Audio Input
