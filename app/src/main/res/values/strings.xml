@@ -13,5 +13,6 @@
     <string name="signup">Sign up</string>
 
     <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="desc_splashscreen">Public speaking</string>
 
 </resources>

@@ -14,6 +14,8 @@ class SignupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
         binding.btnSignup.setOnClickListener {
         //  Authenticate input, enqueue
 
