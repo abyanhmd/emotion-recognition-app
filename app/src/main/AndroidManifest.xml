@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Emotionly">
         <activity
-            android:name=".model.register.SignupActivity"
+            android:name=".model.bottomnav.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".model.signup.SignupActivity"
             android:exported="false" />
         <activity
             android:name=".model.login.LoginActivity"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".model.register.SignupActivity">
+    tools:context=".model.signup.SignupActivity">
 
     <TextView
         android:id="@+id/title_signup"
@@ -109,6 +109,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/blue"
         android:hint="@string/button_signup"
         android:textColorHint="@color/white"
         android:textSize="16sp"

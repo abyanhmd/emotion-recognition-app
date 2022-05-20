@@ -15,4 +15,10 @@
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="desc_splashscreen">Public speaking</string>
 
+    <string name="icon_home">Home</string>
+    <string name="icon_list">List</string>
+    <string name="icon_mic">Microphone</string>
+    <string name="icon_user">User</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

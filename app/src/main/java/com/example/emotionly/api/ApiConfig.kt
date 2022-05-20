@@ -6,9 +6,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiConfig {
-    private const val BASE_URL = "https://story-api.dicoding.dev/v1/"
+    private const val BASE_URL = "https://e582-180-248-20-182.ap.ngrok.io/api/"
 
-    fun getApiService(): Retrofit {
+    fun getApiService(): ApiService {
         val loggingInterceptor =
             HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 
@@ -16,10 +16,12 @@ object ApiConfig {
             .addInterceptor(loggingInterceptor)
             .build()
 
-        return Retrofit.Builder()
+        val retrofit =  Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
+
+        return retrofit.create(ApiService::class.java)
     }
 }
