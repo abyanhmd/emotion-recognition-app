@@ -114,6 +114,46 @@
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@+id/layout_confirm_password" />
 
+    <ImageView
+        android:id="@+id/circleBot1"
+        android:layout_width="99dp"
+        android:layout_height="96dp"
+        android:alpha="0.4"
+        android:src="@drawable/circle_shape"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="348dp"
+        tools:layout_editor_absoluteY="702dp" />
+
+    <ImageView
+        android:id="@+id/circleTop1"
+        android:layout_width="99dp"
+        android:layout_height="96dp"
+        android:alpha="0.4"
+        android:src="@drawable/circle_shape"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-49dp"
+        tools:layout_editor_absoluteY="-27dp" />
+
+    <ImageView
+        android:id="@+id/circleTop"
+        android:layout_width="99dp"
+        android:layout_height="96dp"
+        android:alpha="0.4"
+        android:src="@drawable/circle_shape"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-48dp" />
+
+    <ImageView
+        android:id="@+id/circleBot2"
+        android:layout_width="99dp"
+        android:layout_height="96dp"
+        android:alpha="0.4"
+        android:src="@drawable/circle_shape"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="374dp"
+        tools:layout_editor_absoluteY="638dp" />
+
     <ProgressBar
         android:id="@+id/progress_bar"
         style="@style/Widget.AppCompat.ProgressBar"

@@ -99,7 +99,49 @@
             android:layout_marginStart="8dp"
             android:text="@string/signup"
             android:textColor="@color/blue" />
+
     </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/circleBot1"
+        android:layout_width="99dp"
+        android:layout_height="96dp"
+        android:alpha="0.4"
+        android:src="@drawable/circle_shape"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="383dp"
+        tools:layout_editor_absoluteY="748dp" />
+
+    <ImageView
+        android:id="@+id/circleTop1"
+        android:layout_width="99dp"
+        android:layout_height="96dp"
+        android:alpha="0.4"
+        android:src="@drawable/circle_shape"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-49dp"
+        tools:layout_editor_absoluteY="-27dp" />
+
+    <ImageView
+        android:id="@+id/circleTop"
+        android:layout_width="99dp"
+        android:layout_height="96dp"
+        android:alpha="0.4"
+        android:src="@drawable/circle_shape"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-48dp" />
+
+    <ImageView
+        android:id="@+id/circleBot2"
+        android:layout_width="99dp"
+        android:layout_height="96dp"
+        android:alpha="0.4"
+        android:src="@drawable/circle_shape"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="414dp"
+        tools:layout_editor_absoluteY="685dp" />
 
     <ProgressBar
         android:id="@+id/progress_bar"
