@@ -17,5 +17,6 @@
     <color name="gray">#5A5A5A</color>
     <color name="light_gray">#7C7C7C</color>
     <color name="text_gray">#515151</color>
+    <color name="placeholder_gray">#A9A9A9</color>
     <color name="purple">#8377CC</color>
 </resources>

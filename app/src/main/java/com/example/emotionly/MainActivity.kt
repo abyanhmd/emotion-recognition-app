@@ -2,10 +2,10 @@ package com.example.emotionly
 
 import android.content.Intent
 import android.graphics.Typeface
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.appcompat.app.AppCompatActivity
 import com.example.emotionly.databinding.ActivityMainBinding
 import com.example.emotionly.model.bottomnav.HomeActivity
 import com.example.emotionly.model.login.LoginActivity
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         binding.tvUsspeak.setTypeface(null, Typeface.BOLD)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val loginIntent = Intent(this@MainActivity, LoginActivity::class.java)
+            val loginIntent = Intent(this@MainActivity, HomeActivity::class.java)
             startActivity(loginIntent)
             finish()
         }, 3000)

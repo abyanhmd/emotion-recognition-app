@@ -12,7 +12,6 @@ import com.example.emotionly.databinding.ActivityLoginBinding
 import com.example.emotionly.model.bottomnav.HomeActivity
 import com.example.emotionly.model.signup.SignupActivity
 import com.example.emotionly.response.LoginResponse
-import com.example.emotionly.response.RegisterResponse
 import com.example.emotionly.response.UserRequest
 import retrofit2.Call
 import retrofit2.Callback
@@ -37,12 +36,13 @@ class LoginActivity : AppCompatActivity() {
             val request = UserRequest()
             request.email = binding.edtEmail.text.toString().trim()
             request.password = binding.edtPassword.text.toString().trim()
-            ApiConfig.getApiService().loginUser(request).enqueue(object: Callback<LoginResponse> {
+            ApiConfig.getApiService().loginUser(request).enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(
                     call: Call<LoginResponse>,
                     response: Response<LoginResponse>
                 ) {
-                    if(response.isSuccessful) {
+                    showLoading(false)
+                    if (response.isSuccessful) {
                         Toast.makeText(
                             this@LoginActivity,
                             "Successfully login",
@@ -63,6 +63,7 @@ class LoginActivity : AppCompatActivity() {
                 }
 
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                    showLoading(true)
                     Toast.makeText(
                         this@LoginActivity,
                         "Failed to login",

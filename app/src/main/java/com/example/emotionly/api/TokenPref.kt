@@ -4,7 +4,8 @@ import android.content.Context
 import android.content.SharedPreferences
 
 class TokenPref(context: Context) {
-    private val preference: SharedPreferences = context.getSharedPreferences(EMAIL, Context.MODE_PRIVATE)
+    private val preference: SharedPreferences =
+        context.getSharedPreferences(EMAIL, Context.MODE_PRIVATE)
 
     fun setToken(token: String) {
         val prefEditor: SharedPreferences.Editor = preference.edit()

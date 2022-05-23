@@ -11,12 +11,19 @@
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="signup">Sign up</string>
+    <string name="emotion">Emotion</string>
+    
+    <string name="duration">min:sec</string>
+    <string name="date">dd MMM yyyy</string>
 
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="desc_splashscreen">Public speaking</string>
+    <string name="desc_emotion">Your emotion</string>
+    <string name="desc_clock">Duration of recording</string>
+    <string name="desc_calendar">Recording date taken</string>
 
     <string name="icon_home">Home</string>
-    <string name="icon_list">List</string>
+    <string name="icon_history">History</string>
     <string name="icon_mic">Microphone</string>
     <string name="icon_user">User</string>
     <!-- TODO: Remove or change this placeholder text -->
