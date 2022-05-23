@@ -4,9 +4,8 @@
 - [x] Log In
 - [ ] Dashboard
 - [ ] Recording History
-  - [ ] Paging
 - [ ] Audio Input
-  - [ ] Tab Pager
+  - [ ] ViewPager
   - [ ] Recording
   - [ ] File Chooser 
 - [ ] Profile
