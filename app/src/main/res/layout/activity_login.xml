@@ -102,46 +102,48 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.3"
+        android:contentDescription="@string/desc_circle_login"
+        android:src="@drawable/circle_shape"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:translationY="-20dp"
+        android:translationX="-35dp" />
 
     <ImageView
-        android:id="@+id/circleBot1"
-        android:layout_width="99dp"
-        android:layout_height="96dp"
-        android:alpha="0.2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.3"
+        android:contentDescription="@string/desc_circle_login"
         android:src="@drawable/circle_shape"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="383dp"
-        tools:layout_editor_absoluteY="748dp" />
+        android:translationY="-48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/circleTop1"
-        android:layout_width="99dp"
-        android:layout_height="96dp"
-        android:alpha="0.2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.3"
+        android:contentDescription="@string/desc_circle_login"
         android:src="@drawable/circle_shape"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-49dp"
-        tools:layout_editor_absoluteY="-27dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:translationX="0dp"
+        android:translationY="40dp" />
 
     <ImageView
-        android:id="@+id/circleTop"
-        android:layout_width="99dp"
-        android:layout_height="96dp"
-        android:alpha="0.2"
+        android:contentDescription="@string/desc_circle_login"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.3"
         android:src="@drawable/circle_shape"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-48dp" />
-
-    <ImageView
-        android:id="@+id/circleBot2"
-        android:layout_width="99dp"
-        android:layout_height="96dp"
-        android:alpha="0.2"
-        android:src="@drawable/circle_shape"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="414dp"
-        tools:layout_editor_absoluteY="685dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:translationX="30dp"
+        android:translationY="10dp" />
 
     <ProgressBar
         android:id="@+id/progress_bar"

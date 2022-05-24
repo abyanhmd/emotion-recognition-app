@@ -63,7 +63,7 @@ class LoginActivity : AppCompatActivity() {
                 }
 
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                    showLoading(true)
+                    showLoading(false)
                     Toast.makeText(
                         this@LoginActivity,
                         "Failed to login",

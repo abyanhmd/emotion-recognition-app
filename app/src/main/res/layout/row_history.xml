@@ -15,10 +15,9 @@
 
         <ImageView
             android:id="@+id/iv_emotion"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_marginStart="36dp"
-            android:background="@color/placeholder_gray"
             android:contentDescription="@string/desc_emotion"
             android:scaleType="centerCrop"
             android:src="@drawable/placeholder_circle"

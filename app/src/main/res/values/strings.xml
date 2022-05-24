@@ -21,6 +21,9 @@
     <string name="desc_emotion">Your emotion</string>
     <string name="desc_clock">Duration of recording</string>
     <string name="desc_calendar">Recording date taken</string>
+    <string name="desc_circle_login">Accessory circle</string>
+    <string name="desc_profile">Profile picture</string>
+    <string name="desc_pencil">Edit profile</string>
 
     <string name="icon_home">Home</string>
     <string name="icon_history">History</string>

@@ -2,6 +2,7 @@ package com.example.emotionly.model.bottomnav
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -43,31 +44,36 @@ class HistoryFragment : Fragment() {
             override fun onResponse(call: Call<History>, response: Response<History>) {
                 if(response.isSuccessful) {
                     if(response.body() != null) {
-                        setHistory(response.body())
+                        setHistory(response.body()!!)
                     }
                 } else {
-                    Toast.makeText(HomeActivity(), "Failed to load history", Toast.LENGTH_SHORT).show()
+                    Log.e(TAG, "isNotSuccessful: ${response.body()}")
+//                    Toast.makeText(HomeActivity(), "Failed to load history", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onFailure(call: Call<History>, t: Throwable) {
-                Toast.makeText(HomeActivity(), "Failed to load history", Toast.LENGTH_SHORT).show()
+                Log.e(TAG, "onFailure: ${t.message}")
+//                Toast.makeText(HomeActivity(), "Failed to load history", Toast.LENGTH_SHORT).show()
             }
         })
     }
 
-    private fun setHistory(data: List<History>) {
+    private fun setHistory(data: History) {
         val listHistory = ArrayList<History>()
-        for (item in data) {
-            val emotion = History(
-                item.emotion,
-                item.duration,
-                item.date
-            )
-            listHistory.add(emotion)
-        }
+        val emotion = History(
+            data.emotion,
+            data.duration,
+            data.date
+        )
+        listHistory.add(emotion)
+
         val mContext = context
         val adapter = HistoryAdapter(listHistory, mContext)
         binding.rvHistory.adapter = adapter
+    }
+
+    companion object {
+        const val TAG = "HistoryFragment"
     }
 }
