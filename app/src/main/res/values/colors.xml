@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="background">#ECECEC</color>
-    <color name="broken_white">#ECECEC</color>
+    <color name="line_split">#CFCFCF</color>
     <color name="green">#66E097</color>
     <color name="blue">#7EAEDB</color>
     <color name="dark_blue">#6696C3</color>

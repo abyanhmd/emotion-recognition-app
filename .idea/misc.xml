@@ -15,6 +15,8 @@
         <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/app/src/main/res/layout/circle.xml" value="0.264" />
         <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/drawable/circle_shape.xml" value="0.2595" />
         <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/drawable/ic_baseline_stop_circle_24.xml" value="0.213" />
+        <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/drawable/ic_emotion_disgusted.xml" value="0.1225" />
+        <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/drawable/ic_emotion_fearful.xml" value="0.213" />
         <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/drawable/ic_home.xml" value="0.137" />
         <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/drawable/ic_list.xml" value="0.2515" />
         <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/drawable/placeholder_circle.xml" value="0.2595" />
@@ -23,10 +25,10 @@
         <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/layout/activity_signup.xml" value="0.25416666666666665" />
-        <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
+        <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/layout/fragment_dashboard.xml" value="0.264" />
         <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/layout/fragment_files.xml" value="0.25416666666666665" />
         <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/layout/fragment_history.xml" value="0.2" />
-        <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/layout/fragment_input.xml" value="0.22644927536231885" />
+        <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/layout/fragment_input.xml" value="0.264" />
         <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/layout/fragment_profile.xml" value="0.22644927536231885" />
         <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/layout/row_history.xml" value="0.4" />
         <entry key="..\:/Programming/Semester-6/Bangkit/Capstone/emotion-recognition-app/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />

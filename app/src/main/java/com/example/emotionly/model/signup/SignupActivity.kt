@@ -47,14 +47,14 @@ class SignupActivity : AppCompatActivity() {
                         } else {
                             Toast.makeText(
                                 this@SignupActivity,
-                                "Failed to sign up",
+                                response.message().toString(),
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
                     }
 
                     override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
-                        Toast.makeText(this@SignupActivity, "Failed to sign up", Toast.LENGTH_SHORT)
+                        Toast.makeText(this@SignupActivity, t.message, Toast.LENGTH_SHORT)
                             .show()
                     }
                 })

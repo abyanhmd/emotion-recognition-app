@@ -25,6 +25,7 @@ class ProfileFragment : Fragment() {
         binding.tvName.setTypeface(null, Typeface.BOLD)
         binding.tvEmail.setTypeface(null, Typeface.NORMAL)
 
+        binding.progressBar.visibility = View.GONE
         binding.tvName.text = "Daniel Santoso"
         binding.tvEmail.text = "danielsantoso@gmail.com"
     }

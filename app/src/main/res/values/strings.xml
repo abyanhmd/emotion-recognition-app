@@ -12,11 +12,15 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="signup">Sign up</string>
     <string name="emotion">Emotion</string>
+    <string name="types">Our type of emotions</string>
     
     <string name="duration">min:sec</string>
     <string name="date">dd MMM yyyy</string>
+    <string name="browse">Browse</string>
+    <string name="no_file">No selected audio file</string>
 
     <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="choose_file">Choose an audio file</string>
     <string name="desc_splashscreen">Public speaking</string>
     <string name="desc_emotion">Your emotion</string>
     <string name="desc_clock">Duration of recording</string>
@@ -24,6 +28,15 @@
     <string name="desc_circle_login">Accessory circle</string>
     <string name="desc_profile">Profile picture</string>
     <string name="desc_pencil">Edit profile</string>
+    <string name="desc_music">Music icon</string>
+
+    <string name="type_angry">Angry</string>
+    <string name="type_disgusted">Disgusted</string>
+    <string name="type_fearful">Fearful</string>
+    <string name="type_happy">Happy</string>
+    <string name="type_neutral">Neutral</string>
+    <string name="type_sad">Sad</string>
+    <string name="type_surprised">Surprised</string>
 
     <string name="icon_home">Home</string>
     <string name="icon_history">History</string>
