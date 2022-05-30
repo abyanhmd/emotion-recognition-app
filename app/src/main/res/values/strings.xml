@@ -19,6 +19,10 @@
     <string name="browse">Browse</string>
     <string name="no_file">No selected audio file</string>
 
+    <string name="dashboard_firstline">Practice your speaking now</string>
+    <string name="dashboard_secondline">This application will help you to improve your public speaking skills to the fullest. By analyzing your voice, we will definitely help boosting your confidence.</string>
+    <string name="dashboard_thirdline">Confidence is your number one weapon!</string>
+
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="choose_file">Choose an audio file</string>
     <string name="desc_splashscreen">Public speaking</string>
