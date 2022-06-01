@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         binding.tvUsspeak.setTypeface(null, Typeface.BOLD)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val loginIntent = Intent(this@MainActivity, HomeActivity::class.java)
+            val loginIntent = Intent(this@MainActivity, LoginActivity::class.java)
             startActivity(loginIntent)
             finish()
         }, 3000)

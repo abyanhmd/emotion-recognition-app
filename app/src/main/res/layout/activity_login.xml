@@ -34,6 +34,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
+        android:alpha="0"
         app:layout_constraintTop_toBottomOf="@+id/title_login">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -49,6 +50,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:alpha="0"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
@@ -67,6 +69,7 @@
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
+        android:alpha="0"
         android:layout_height="58dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
@@ -87,8 +90,10 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_login">
 
         <TextView
+            android:id="@+id/tv_acc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:alpha="0"
             android:hint="@string/dont_have_account"
             android:textColor="@color/text_gray" />
 
@@ -96,6 +101,7 @@
             android:id="@+id/btn_signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:alpha="0"
             android:layout_marginStart="8dp"
             android:text="@string/signup"
             android:textColor="@color/blue" />

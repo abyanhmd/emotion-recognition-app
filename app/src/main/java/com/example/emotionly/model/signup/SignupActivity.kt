@@ -1,8 +1,11 @@
 package com.example.emotionly.model.signup
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.emotionly.api.ApiConfig
@@ -59,5 +62,24 @@ class SignupActivity : AppCompatActivity() {
                     }
                 })
         }
+        playAnimation()
+    }
+    private fun playAnimation(){
+        val name = ObjectAnimator.ofFloat(binding.layoutName, View.ALPHA, 1F ).setDuration(500)
+        val email = ObjectAnimator.ofFloat(binding.layoutEmail, View.ALPHA, 1F).setDuration(500)
+        val password = ObjectAnimator.ofFloat(binding.layoutPassword, View.ALPHA, 1F).setDuration(500)
+        val confirm = ObjectAnimator.ofFloat(binding.layoutConfirmPassword, View.ALPHA, 1F).setDuration(500)
+
+        AnimatorSet().apply {
+            playTogether(name,email, password,confirm)
+            startDelay = (500)
+        }.start()
+
+        ObjectAnimator.ofFloat(binding.btnSignup, View.ALPHA, 1F).apply{
+            duration = 1200
+            startDelay = (1200)
+
+        }.start()
+
     }
 }
