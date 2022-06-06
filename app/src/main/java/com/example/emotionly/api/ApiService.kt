@@ -19,7 +19,7 @@ interface ApiService {
     @POST("history")
     fun getHistory(
        @Header("Authorization") value: String
-    ): Call<History>
+    ): Call<HistoryResponse>
 
     @PUT("user")
     fun renameUser(

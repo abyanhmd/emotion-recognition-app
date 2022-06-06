@@ -74,8 +74,16 @@ class LoginActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
-            })
-        }
+            }
+
+            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                Toast.makeText(
+                    this@LoginActivity,
+                    t.message ?: "Failed to login",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        })
         playAnimation()
     }
 
@@ -101,7 +109,6 @@ class LoginActivity : AppCompatActivity() {
         ObjectAnimator.ofFloat(binding.btnSignup, View.ALPHA, 1F).apply{
             duration = 1200
             startDelay = (1200)
-
         }.start()
     }
     companion object {

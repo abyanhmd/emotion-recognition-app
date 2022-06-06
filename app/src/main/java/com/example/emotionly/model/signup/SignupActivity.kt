@@ -67,10 +67,9 @@ class SignupActivity : AppCompatActivity() {
         val name = ObjectAnimator.ofFloat(binding.layoutName, View.ALPHA, 1F ).setDuration(500)
         val email = ObjectAnimator.ofFloat(binding.layoutEmail, View.ALPHA, 1F).setDuration(500)
         val password = ObjectAnimator.ofFloat(binding.layoutPassword, View.ALPHA, 1F).setDuration(500)
-        val confirm = ObjectAnimator.ofFloat(binding.layoutConfirmPassword, View.ALPHA, 1F).setDuration(500)
 
         AnimatorSet().apply {
-            playTogether(name,email, password,confirm)
+            playTogether(name, email, password)
             startDelay = (500)
         }.start()
 
