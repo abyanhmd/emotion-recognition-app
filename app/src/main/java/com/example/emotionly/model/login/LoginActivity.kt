@@ -1,5 +1,7 @@
 package com.example.emotionly.model.login
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
@@ -72,17 +74,9 @@ class LoginActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                 }
-            }
-
-            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                showLoading(false)
-                Toast.makeText(
-                    this@LoginActivity,
-                    t.message ?: "Failed to login",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-        })
+            })
+        }
+        playAnimation()
     }
 
     private fun showLoading(state: Boolean) {
@@ -93,6 +87,23 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    private fun playAnimation(){
+        val email = ObjectAnimator.ofFloat(binding.layoutEmail, View.ALPHA, 1F).setDuration(500)
+        val password = ObjectAnimator.ofFloat(binding.layoutPassword, View.ALPHA, 1F).setDuration(500)
+        val login = ObjectAnimator.ofFloat(binding.btnLogin, View.ALPHA, 1F).setDuration(500)
+        val question = ObjectAnimator.ofFloat(binding.tvAcc, View.ALPHA, 1F).setDuration(500)
+
+        AnimatorSet().apply{
+            playTogether(email,password,login,question)
+            startDelay = (500)
+        }.start()
+
+        ObjectAnimator.ofFloat(binding.btnSignup, View.ALPHA, 1F).apply{
+            duration = 1200
+            startDelay = (1200)
+
+        }.start()
+    }
     companion object {
         const val TAG = "LoginActivity"
     }
