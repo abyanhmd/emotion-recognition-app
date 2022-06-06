@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/fragment_dashboard"
-        android:name="com.example.emotionly.model.bottomnav.DashboardFragment"
+        android:name="com.example.emotionly.model.home.DashboardFragment"
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/fragment_history"
-        android:name="com.example.emotionly.model.bottomnav.HistoryFragment"
+        android:name="com.example.emotionly.model.home.HistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" />
 
     <fragment
         android:id="@+id/fragment_input"
-        android:name="com.example.emotionly.model.bottomnav.InputFragment"
+        android:name="com.example.emotionly.model.home.InputFragment"
         android:label="fragment_input"
         tools:layout="@layout/fragment_input" />
 
     <fragment
         android:id="@+id/fragment_profile"
-        android:name="com.example.emotionly.model.bottomnav.ProfileFragment"
+        android:name="com.example.emotionly.model.home.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 

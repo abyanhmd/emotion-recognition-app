@@ -11,4 +11,7 @@ class LoginResponse {
 
     @SerializedName("token")
     lateinit var token: String
+
+    @SerializedName("id")
+    lateinit var id: String
 }

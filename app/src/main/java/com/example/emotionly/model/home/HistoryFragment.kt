@@ -1,4 +1,4 @@
-package com.example.emotionly.model.bottomnav
+package com.example.emotionly.model.home
 
 import android.content.Context
 import android.os.Bundle
@@ -6,7 +6,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.emotionly.R
@@ -25,8 +24,6 @@ class HistoryFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = FragmentHistoryBinding.inflate(layoutInflater)
-        val context: Context = this.context ?: return
-        val token = TokenPref(context)
         binding.rvHistory.layoutManager = LinearLayoutManager(context)
     }
 
@@ -39,11 +36,13 @@ class HistoryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val context: Context = this.context ?: return
+        val token = TokenPref(context).getToken()
 
-        ApiConfig.getApiService().getHistory().enqueue(object : Callback<History> {
+        ApiConfig.getApiService().getHistory("Bearer $token").enqueue(object : Callback<History> {
             override fun onResponse(call: Call<History>, response: Response<History>) {
-                if(response.isSuccessful) {
-                    if(response.body() != null) {
+                if (response.isSuccessful) {
+                    if (response.body() != null) {
                         setHistory(response.body()!!)
                     }
                 } else {

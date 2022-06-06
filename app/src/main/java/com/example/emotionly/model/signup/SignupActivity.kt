@@ -52,7 +52,6 @@ class SignupActivity : AppCompatActivity() {
                             ).show()
                         }
                     }
-
                     override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
                         Toast.makeText(this@SignupActivity, t.message, Toast.LENGTH_SHORT)
                             .show()

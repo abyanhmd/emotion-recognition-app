@@ -1,4 +1,4 @@
-package com.example.emotionly.model.bottomnav
+package com.example.emotionly.model.home
 
 import android.content.Intent
 import android.os.Bundle

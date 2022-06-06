@@ -1,17 +1,12 @@
 package com.example.emotionly.api
 
 import com.example.emotionly.adapter.History
-import com.example.emotionly.response.LoginResponse
-import com.example.emotionly.response.RegisterResponse
-import com.example.emotionly.response.UserRequest
+import com.example.emotionly.response.*
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface ApiService {
-    @POST("register")
+    @POST("signup")
     fun registerUser(
         @Body registerRequest: UserRequest
     ): Call<RegisterResponse>
@@ -21,8 +16,20 @@ interface ApiService {
         @Body loginRequest: UserRequest
     ): Call<LoginResponse>
 
-    @GET("upload")
+    @POST("history")
     fun getHistory(
-//       @Header("Authorization") value: String
+       @Header("Authorization") value: String
     ): Call<History>
+
+    @PUT("user")
+    fun renameUser(
+        @Header("Authorization") value: String,
+        @Body name: String
+    ): Call<HistoryResponse>
+
+    @GET("user/{id}/")
+    fun getUser(
+        @Header("Authorization") value: String,
+        @Path("id") id: String
+    ): Call<UserResponse>
 }
