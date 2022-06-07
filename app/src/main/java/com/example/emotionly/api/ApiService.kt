@@ -16,7 +16,7 @@ interface ApiService {
         @Body loginRequest: UserRequest
     ): Call<LoginResponse>
 
-    @POST("history")
+    @GET("history")
     fun getHistory(
        @Header("Authorization") value: String
     ): Call<HistoryResponse>
