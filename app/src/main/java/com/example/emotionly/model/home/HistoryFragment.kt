@@ -6,17 +6,20 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.emotionly.R
-import com.example.emotionly.adapter.History
 import com.example.emotionly.adapter.HistoryAdapter
 import com.example.emotionly.api.ApiConfig
 import com.example.emotionly.api.TokenPref
 import com.example.emotionly.databinding.FragmentHistoryBinding
+import com.example.emotionly.response.HistoryResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.util.*
+import kotlin.collections.ArrayList
 
 class HistoryFragment : Fragment() {
     private lateinit var binding: FragmentHistoryBinding
@@ -39,31 +42,44 @@ class HistoryFragment : Fragment() {
         val context: Context = this.context ?: return
         val token = TokenPref(context).getToken()
 
-        ApiConfig.getApiService().getHistory("Bearer $token").enqueue(object : Callback<History> {
-            override fun onResponse(call: Call<History>, response: Response<History>) {
+        ApiConfig.getApiService().getHistory("Bearer $token").enqueue(object : Callback<HistoryResponse> {
+            override fun onResponse(call: Call<HistoryResponse>, response: Response<HistoryResponse>) {
                 if (response.isSuccessful) {
                     if (response.body() != null) {
-                        setHistory(response.body()!!)
+                        val data = response.body()
+                        val listHistory = HistoryResponse(
+                            data?.emotion,
+                            data?.dateTaken ?: Date(),
+                            data?.duration ?: "",
+                            data?.suggestion,
+                            data?.fileName ?: "",
+                            data?.audioFile ?: ""
+                        )
+                        setHistory(listHistory)
                     }
                 } else {
-                    Log.e(TAG, "isNotSuccessful: ${response.body()}")
-//                    Toast.makeText(HomeActivity(), "Failed to load history", Toast.LENGTH_SHORT).show()
+                    Log.e(TAG, "isNotSuccessful: ${response.errorBody()}")
+                    Toast.makeText(getContext(), "Failed to load history", Toast.LENGTH_SHORT).show()
                 }
             }
 
-            override fun onFailure(call: Call<History>, t: Throwable) {
+            override fun onFailure(call: Call<HistoryResponse>, t: Throwable) {
                 Log.e(TAG, "onFailure: ${t.message}")
-//                Toast.makeText(HomeActivity(), "Failed to load history", Toast.LENGTH_SHORT).show()
+                Toast.makeText(getContext(), "Failed to load history", Toast.LENGTH_SHORT).show()
             }
         })
     }
 
-    private fun setHistory(data: History) {
-        val listHistory = ArrayList<History>()
-        val emotion = History(
+    private fun setHistory(data: HistoryResponse) {
+        val listHistory = ArrayList<HistoryResponse>()
+
+        val emotion = HistoryResponse(
             data.emotion,
+            data.dateTaken,
             data.duration,
-            data.date
+            data.suggestion,
+            data.fileName,
+            data.audioFile
         )
         listHistory.add(emotion)
 

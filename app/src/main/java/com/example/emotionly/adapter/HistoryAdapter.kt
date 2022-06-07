@@ -5,8 +5,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.emotionly.databinding.RowHistoryBinding
+import com.example.emotionly.response.HistoryResponse
 
-class HistoryAdapter(private val listHistory: ArrayList<History>, val context: Context?) :
+class HistoryAdapter(private val listHistory: ArrayList<HistoryResponse>, val context: Context?) :
     RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
     class ViewHolder(binding: RowHistoryBinding) : RecyclerView.ViewHolder(binding.root) {
         val emotion = binding.tvEmotion
@@ -22,7 +23,7 @@ class HistoryAdapter(private val listHistory: ArrayList<History>, val context: C
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.emotion.text = listHistory[position].emotion
         holder.duration.text = listHistory[position].duration
-        holder.date.text = listHistory[position].date
+        holder.date.text = listHistory[position].dateTaken.toString()
     }
 
     override fun getItemCount(): Int = listHistory.size

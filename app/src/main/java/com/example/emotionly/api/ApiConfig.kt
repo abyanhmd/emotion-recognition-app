@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiConfig {
-    private const val BASE_URL = "https://c22-ps198.et.r.appspot.com/api/v1/"
+    private const val BASE_URL = "https://emotion-speech-recognition.herokuapp.com/api/v1/"
 
     fun getApiService(): ApiService {
         val loggingInterceptor =
